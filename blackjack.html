@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackJack Game</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>LET'S PLAY BLACKJACK</h1>
+
+        <section class="rules">
+            <h1>Vegas Rules Apply:</h1>
+            <P>
+            <h3>Goal:</h3>
+            Get closer to 21 than the dealer without going over.
+            <h3>Cards:</h3>Cards
+            Cards 2-10 are worth their face value, while Jacks, Queens, Kings, and 10s are worth 10. Aces can be played
+            as 1 or 11, whichever is best for your hand.
+            <h3>Dealing:</h3>
+            Players are dealt two cards face up, while the dealer receives two cards, one face up and one face down.
+            <h3>Play:</h3>Play
+            After receiving your first two cards, you can either "hit" (ask for more cards) or "stand" (keep your
+            current hand). The dealer must stand if their total is 17 or more, and take a card if it's 16 or less, until
+            they reach 17 or more.
+            <h2>Winning:</h2>
+            If your total is higher than the dealer's without busting, you win and are paid even money. If you hit
+            exactly 21, you can win even more. If you and the dealer both get a natural blackjack (two cards totaling
+            21), it's a push, meaning you neither win nor lose.
+            <h2>Losing</h2> Losing
+            You lose your wager if you bust (go over 21) or if the dealer has a higher total than you.
+            Other options
+            If you don't like your first two cards, you can surrender, which means the dealer takes half of your bet and
+            you discard your hand. You can't surrender if the dealer has blackjack. If the dealer's first card is an
+            Ace, you can also buy insurance</P>
+        </section>
+        <div class="gameArea">
+            <!--display player and dealer cards cards-->
+            <div class="dealer-area">
+                <h2>Dealers' Hand</h2>
+                <div class="card-container" id="dealer-hand">
+
+                </div>
+            </div>
+
+            <div class="player-area">
+                <h2>Player's Hand</h2>
+                <div class="card-container" id="player-hand">
+                    
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="deal-button">Deal</button>
+                <button id="hit-button">Hit</button>
+                <button id="stand-button"></button>
+            </div>
+            <div class="messages">
+                <p id="message"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="blackjack.js"></script>
+</body>
+
+</html>
