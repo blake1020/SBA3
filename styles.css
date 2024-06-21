@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 50%;
 }
 
 .container {
@@ -88,4 +88,8 @@ rules h3 {
  .messages {
     font-size: 1.2;
     font-weight: bold;
+ }
+
+ input[type="number"] {
+    font-size: 20px;
  }
