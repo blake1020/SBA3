@@ -112,7 +112,7 @@ function startGame() {
     shuffleDeck();
     initialDeal();
     renderHands();
-
+    updatePointsDisplay();
     const playerScore = calculateScore(playerHand);
     const dealerScore = calculateScore(dealerHand);
     console.log(playerScore);
@@ -269,12 +269,13 @@ function updatePointsDisplay() {
  dealbtn.addEventListener('click', startGame);
 
  //hit button
- const hitBtn = document.getElementById('hit-btn').addEventListener('click', playerHit);
+ const hitBtn = document.getElementById('hit-btn')
 hitBtn.addEventListener("click", playerHit);
 
 // stand button
-const standBtn = document.getElementById('stand-btn').addEventListener('click', playerStand);
+const standBtn = document.getElementById('stand-btn')
 standBtn.addEventListener('click', playerStand);
+document.getElementById("newGame-btn").addEventListener('click', resetGame);
 
 //Initial game setup
 createBettingDiv();
@@ -291,19 +292,5 @@ playerHand.forEach(card => {
     console.log(`${card.value} of ${card.suit}`);
 
 })
-document.getElementById("newGame-btn").addEventListener('click', resetGame);
 startGame();
 
-// Player actions (hit, stand)
-
-// Dealer actions (automated)
-
-// Calculate scores function
-
-// Determine game outcome function
-
-// Display cards and game messages on UI
-
-// Event listeners for user actions (hit, stand buttons)
-
-// Game loop and restart function
